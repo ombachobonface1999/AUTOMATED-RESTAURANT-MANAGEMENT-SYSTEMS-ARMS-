@@ -1,0 +1,42 @@
+{% extends 'food/base.html' %}
+
+{% load static %} 
+
+{% block title %} entrees {% endblock %}
+
+{% block content %}
+    <div class="container" style="margin-left: 30px;">
+        <div class="row">
+            {% for entree in entrees %}
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{ entree.image_url }}" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title" id="entree{{entree.id}}">{{ entree.name }}</h5>
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" name="entree{{entree.id}}" type="radio" value="{{entree.price}}"></input>
+                                    Price: $ {{ entree.price }}
+                                </label>
+                            </div>
+                            <p class="card-text">{{ entree.stock }}</p>
+                            <button class="btn-info mt-3" onclick="addEntree({{entree.id}})">add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %} 
+        </div>
+    </div>
+    
+    <div class="container-fluid" style="position: fixed; top: 80px; right: 1px; width: 400px; background-color: #343a40; color: white;">
+        <div class="col-md-4 orders">
+            <div class="text-light p-4">
+                <h2 class="text-center">Order List</h2>
+                <ul id="Ecart"></ul>
+                <h4 class="text-right" id="Etotal">Total: $ 0</h4>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="{% static 'Eorder.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,91 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://img.freepik.com/premium-photo/preparation-cooking-wooden-background-top-view-free-space-text_187166-51517.jpg'); /* Replace 'https://example.com/background-image.jpg' with the URL of your background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container-large {
+    width: 30%; /* Increased width */
+    height: 70%; /* Increased height */
+    background-color: rgba(255, 255, 255, 0.8); /* Background color with opacity */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+}
+
+h2 {
+    text-align: center;
+    color: #fcf9f9;
+}
+
+form {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    background: transparent;
+    color: #f4f5f3;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+    background: transparent;
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #dce2e8;
+    color: #161313;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: #515355;
+}
+
+.message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #dff0d8;
+    border: 1px solid #d6e9c6;
+    color: #3c763d;
+}
+
+.log-in-link {
+    text-align: center;
+    margin-top: 15px;
+    color: #f5f7f9;
+}
+
+.log-in-link a {
+    color: #edf1f6;
+    text-decoration: none;
+}
+
+.log-in-link a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,34 @@
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href ="{% static 'register.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="container-large">
+        <h2>Login</h2>
+
+        {% if message %}
+            <div class="message">{{ message }}</div>
+        {% endif %}
+
+        <form action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input class="form-control" autofocus type="text" id="username" name="username" placeholder="Enter your username">
+            </div>
+            <div class="form-group">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <label for="password">Password:</label>
+                <input class="form-control" type="password" id="password" name="password" placeholder="Enter your password">
+            </div>
+            <button class="btn btn-primary" type="submit">Login</button>
+        </form>
+
+        <p class="log-in-link">Don't have an account? <a href="{% url 'register' %}">Register here.</a></p>
+    </div>
+</body>
+</html>
